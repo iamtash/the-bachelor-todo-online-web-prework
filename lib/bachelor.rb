@@ -1,7 +1,6 @@
 require "pry"
 
-def get_first_name_of_season_winner(data, season_arg)
-  binding.pry
+def get_first_name_of_season_winner(data, season_arg)  
   data[season_arg].find {|contestant|
     contestant["status"] == "Winner"}["name"].split(" ").first
 end
