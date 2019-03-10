@@ -22,7 +22,9 @@ def count_contestants_by_hometown(data, hometown)
 end
 
 def get_occupation(data, hometown)
-  # code here
+  data.find {|season, contestants|
+    contestants.find {|contestant| contestant["hometown"] == hometown}
+  }[1].find {|contestant| contestant["hometown"] == hometown}["occupation"]
 end
 
 def get_average_age_for_season(data, season)
