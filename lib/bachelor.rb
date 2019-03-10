@@ -9,7 +9,8 @@ def get_contestant_name(data, occupation)
   binding.pry
   data.find {|season, contestants|
     contestants.find {|contestant| contestant["occupation"] == occupation}
-  }
+  }[1].find {|contestant| contestant["occupation"] == occupation
+    }["name"]
 end
 
 def count_contestants_by_hometown(data, hometown)
