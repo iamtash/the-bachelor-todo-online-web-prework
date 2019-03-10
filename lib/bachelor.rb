@@ -28,8 +28,5 @@ def get_occupation(data, hometown)
 end
 
 def get_average_age_for_season(data, season)
-  data.map {|season, contestants|
-    binding.pry
-    contestants.map {|contestant| contestant["age"].to_f}
-  }
+  data[season].map {|contestant| contestant["age"].to_f}
 end
