@@ -2,7 +2,7 @@ require "pry"
 
 def get_first_name_of_season_winner(data, season_arg)
   binding.pry
-  data[season_arg].map.find {|contestant|
+  data[season_arg].map {|contestant|
     contestant["name"].split(" ").first if contestant["status"] == "Winner"}
 end
 
