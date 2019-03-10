@@ -18,6 +18,8 @@ def count_contestants_by_hometown(data, hometown)
     contestants.each {|contestant|
       count += 1 if contestant["hometown"] == hometown}
   }
+  binding.pry
+  count
 end
 
 def get_occupation(data, hometown)
