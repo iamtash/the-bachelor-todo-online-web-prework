@@ -29,5 +29,5 @@ end
 
 def get_average_age_for_season(data, season)
   binding.pry
-  eval (data[season].map {|contestant| contestant["age"].to_f}.join("+"))/data[season].length
+  eval (data[season].map {|contestant| contestant["age"].to_f}.join(+))/data[season].length
 end
